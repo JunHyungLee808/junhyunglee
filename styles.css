@@ -2,9 +2,9 @@
 
 /* Defining Properties */
 :root {
-    --primary-color: #047aed;
-    --secondary-color: #1c3fa8;
-    --dark-color: #002240;
+    --primary-color: #7b24ee;
+    --secondary-color: #4a156e;
+    --dark-color: #210040;
     --light-color: #f4f4f4;
 }
 
@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     color: #333;
     line-height: 1.6;
 }
@@ -49,6 +49,7 @@ img {
     background: var(--primary-color);
     color: #fff;
     height: 70px;
+    background-color: var(--dark-color);
 }
 
 .navbar .flex {
@@ -91,6 +92,10 @@ img {
     gap: 30px;
 }
 
+.showcase-text {
+    animation: slideInFromLeft 1s ease-in;
+}
+
 .showcase-form {
     position: relative;
     top: 60px;
@@ -98,6 +103,7 @@ img {
     width: 400px;
     padding: 40px;
     z-index: 100;
+    animation: slideInFromRight 1s ease-in;
 }
 
 .showcase-form .form-control {
@@ -135,6 +141,7 @@ img {
 /* Skills */
 .skills {
     padding-top: 100px;
+    animation: slideInFromBottom 1s ease-in;
 }
 
 .skills-heading {
@@ -162,6 +169,11 @@ img {
     grid-row: 1 / span 2;
 }
 
+/* Resume */
+.resume .grid {
+    grid-template-columns: 4fr 3fr;
+}
+
 /* Technologies */
 .technologies .flex {
     flex-wrap: wrap;
@@ -187,36 +199,98 @@ img {
     margin: 0 10px;
 }
 
+/* Animations */
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+
 /* Tablets and Under */
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     .grid,
     .showcase .grid,
-    .stats .grid,
-    .cli .grid,
-    .cloud .grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+    .skills .grid,
+    .projects .grid,
+    .resume .grid,
+    .features-main .grid,
+    .docs-main .grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
     }
-
+  
     .showcase {
-        height: auto;
+      height: auto;
     }
-
+  
     .showcase-text {
-        text-align: center;
-        margin-top: 40px;
+      text-align: center;
+      margin-top: 40px;
+      animation: slideInFromTop 1s ease-in;
     }
-
+  
     .showcase-form {
-        justify-self: center;
-        margin: auto;
+      justify-self: center;
+      margin: auto;
+      animation: slideInFromBottom 1s ease-in;
     }
-
-    .cli .grid >*:first-child {
-        grid-column: 1;
-        grid-row: 1;
+  
+    .cli .grid > *:first-child {
+      grid-column: 1;
+      grid-row: 1;
     }
-}
+  
+    .features-head,
+    .features-sub-head,
+    .docs-head {
+      text-align: center;
+    }
+  
+    .features-head img,
+    .features-sub-head img,
+    .docs-head img {
+      justify-self: center;
+    }
+  
+    .features-main .grid > *:first-child,
+    .features-main .grid > *:nth-child(2) {
+      grid-column: 1;
+    }
+  }
 
 /* Mobile */
 @media(max-width: 500px) {
