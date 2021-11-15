@@ -60,6 +60,10 @@ img {
     display: flex;
 }
 
+.navbar h1 {
+    font-size: 1.25em;
+}
+
 .navbar a {
     color: #fff;
     padding: 10px;
