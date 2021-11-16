@@ -52,6 +52,16 @@ img {
     background-color: var(--dark-color);
 }
 
+.recursion a:hover {
+    font-size: 0px;
+}
+
+.recursion a:hover:before {
+    color: burlywood;
+    font-size: 16px;
+    content:"Recursion";
+}
+
 .navbar .flex {
     justify-content: space-between;
 }
@@ -72,6 +82,7 @@ img {
 
 .navbar a:hover {
     border-bottom: 2px #fff solid;
+    color: burlywood;
 }
 
 /* Showcase */
@@ -203,46 +214,58 @@ img {
     margin: 0 10px;
 }
 
+.footer a:hover {
+    color: burlywood;
+}
+
 /* Animations */
 @keyframes slideInFromLeft {
     0% {
       transform: translateX(-100%);
+      opacity: 0.2;
     }
   
     100% {
       transform: translateX(0);
+      opacity: 1;
     }
-  }
+}
   
-  @keyframes slideInFromRight {
+@keyframes slideInFromRight {
     0% {
       transform: translateX(100%);
+      opacity: 0.2;
     }
   
     100% {
       transform: translateX(0);
+      opacity: 1;
     }
-  }
+}
   
-  @keyframes slideInFromTop {
+@keyframes slideInFromTop {
     0% {
       transform: translateY(-100%);
+      opacity: 0.2;
     }
   
     100% {
       transform: translateX(0);
+      opacity: 1;
     }
-  }
+}
   
-  @keyframes slideInFromBottom {
+@keyframes slideInFromBottom {
     0% {
       transform: translateY(100%);
+      opacity: 0.2;
     }
   
     100% {
       transform: translateX(0);
+      opacity: 1;
     }
-  }
+}
 
 /* Tablets and Under */
 @media (max-width: 768px) {
