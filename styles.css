@@ -55,6 +55,7 @@ img {
     color: #fff;
     height: 70px;
     background-color: var(--dark-color);
+    width: 100%;
 }
 
 .recursion a:hover {
@@ -96,6 +97,7 @@ img {
     background-color: var(--primary-color);
     color: #fff;
     position: relative;
+    width: 100%;
 }
 
 .showcase h1 {
@@ -162,6 +164,7 @@ img {
 .skills {
     padding-top: 100px;
     animation: slideInFromBottom 1s ease-in;
+    width: 100%;
 }
 
 .skills-heading {
@@ -182,6 +185,7 @@ img {
 .projects .grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    width: 100%;
 }
 
 .projects .grid > *:first-child {
@@ -192,11 +196,13 @@ img {
 /* Resume */
 .resume .grid {
     grid-template-columns: 4fr 3fr;
+    width: 100%;
 }
 
 /* Technologies */
 .technologies .flex {
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .technologies .card {
@@ -215,12 +221,28 @@ img {
 }
 
 /* Footer */
+.footer {
+    width: 100%;
+}
+
 .footer .social a {
     margin: 0 10px;
 }
 
 .footer a:hover {
     color: burlywood;
+}
+
+.fa-github:hover {
+    color: #c9510c;
+}
+
+.fa-linkedin:hover {
+    color: #0077b5;
+}
+
+.fa-envelope-square:hover {
+    color: #e52d27;
 }
 
 /* Animations */
