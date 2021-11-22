@@ -125,6 +125,7 @@ img {
     width: 400px;
     padding: 40px;
     z-index: 100;
+    width: 100%;
     animation: slideInFromRight 1s ease-in;
 }
 
